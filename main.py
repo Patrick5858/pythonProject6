@@ -64,18 +64,24 @@ def funcl1():
 
 #parametralised function
 #quadratic equations
-def quad(a,b,c):
-    if b*b-4*a*c<0:
-        print("the discriminant is negative\n")
+def quad(a, b, c):
+    discriminant = b*b - 4*a*c
+    if discriminant < 0:
+        print("The discriminant is negative")
         print("The roots are complex")
-        elif b*b-4*a*b*c==0
-        print("The roots are equal\ln")
-        x1=-b/2*a print("x1=x2",x1,"\n")
-    elif b*b-4*a*c>0:
-        print(The roots are distinct)
+    elif discriminant == 0:
+        print("The roots are equal")
+        x1 = -b / (2*a)
+        print("x1 = x2 =", x1)
+    else:
+        print("The roots are distinct")
+        x1 = (-b + (discriminant ** 0.5)) / (2*a)
+        x2 = (-b - (discriminant ** 0.5)) / (2*a)
+        print("x1 =", x1)
+        print("x2 =", x2)
 
 
-from numpy import *
+
 
 
 
