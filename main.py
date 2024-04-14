@@ -79,7 +79,13 @@ def quad(a, b, c):
         x2 = (-b - (discriminant ** 0.5)) / (2*a)
         print("x1 =", x1)
         print("x2 =", x2)
-
+n=int(input('Enter a number'))
+if n > 70:
+    print("The BusFare is Overpriced")
+elif n ==70:
+    print("The Busfare is Okay")
+else:
+    print("Invalid Input, Please try again")
 
 
 

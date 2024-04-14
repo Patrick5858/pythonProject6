@@ -1,0 +1,233 @@
+
+
+
+keys = ['Graduate Assistant', 'Assistant Lecturer', 'Lecturer']
+values = [10, 11, 11]
+# Using dictionary comprehension
+result_dict = {keys[i]: values[i] for i in range(len(keys))}
+print(result_dict)
+
+
+even_count = 0
+odd_count = 0
+
+for num in range(12, 19):
+    if num % 2 == 0:
+        print(f"{num} is an even number.")
+        even_count += 1
+    else:
+        print(f"{num} is an odd number.")
+        odd_count += 1
+
+print(f"There are {even_count} even numbers and {odd_count} odd numbers in the given range.")
+
+
+ #The main difference between a list and an array lies in their implementation and functionality. In Python, a list is a built-in data structure that can hold elements of different data types and sizes. Lists are dynamic and resizable, meaning elements can be added, removed, or modified after the list is created. On the other hand, arrays in Python are provided by the array module or external libraries like NumPy. Arrays are homogeneous collections of elements of the same data type and size, and they offer more efficient storage and operations compared to lists.
+ # List example
+my_list = [1, 2, 3, 'a', 'b', 'c']
+print(my_list)
+
+# Array example (using NumPy)
+import numpy as np
+my_array = np.array([1, 2, 3])
+print(my_array)
+
+
+#d
+number = float(input("Enter a number: "))
+
+if number > 0:
+    print("The number is positive.")
+elif number == 0:
+    print("The number is zero.")
+else:
+    print("The number is negative.")
+
+#e
+
+#Lists and Tuples are both used to store collections of items in Python, but they have some differences:
+
+#Mutability: Lists are mutable, meaning their elements can be changed after the list is created, while Tuples are immutable, meaning their elements cannot be changed after the tuple is created.
+#Syntax: Lists are defined using square brackets [ ], while Tuples are defined using parentheses ( ).
+#One method present in Lists and not in Tuples is the append() method, which allows adding elements to the end of a list.
+
+# List
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+
+# Tuple
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)
+
+
+#f
+
+# Original code
+i = 1
+while i < 8:
+    print(i)
+    i += 1
+
+# Equivalent code using for loop
+for i in range(1, 8):
+    print(i)
+
+#g
+fruits = ['Banana', 'Apple', 'Orange']
+for index, fruit in enumerate(fruits):
+    print(f"Index {index}: {fruit}")
+
+
+#h
+#Pandas: Pandas is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are highly efficient for handling structured data.
+#NumPy: NumPy is a fundamental package for scientific computing with Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently
+
+
+#2a
+def get_BMI():
+    weight = float(input("Enter your weight in kilograms: "))
+    height = float(input("Enter your height in meters: "))
+
+    # Calculate BMI
+    bmi = weight / (height ** 2)
+
+    # Determine BMI category
+    if bmi < 17:
+        print("You are underweight.")
+    elif 17 <= bmi <= 24:
+        print("Your BMI is fine.")
+    else:
+        print("You are overweight.")
+
+# Test the function
+get_BMI()
+
+#2b
+
+# Initial list of counties
+County = ["Trans Nzoia", "Embu", "Nakuru", "Taita Taveta", "Kiambu", "Embu", "West Pokot"]
+
+# i. Add Kirinyaga county to the List
+County.append("Kirinyaga")
+
+# ii. Add Tharaka Nithi county to the List, specifically in the first index of the List
+County.insert(0, "Tharaka Nithi")
+
+# Initialize lists to categorize counties
+County1 = []  # Counties with single names
+County2 = []  # Counties with two names
+
+# Loop over the updated list
+for county in County:
+    if len(county.split()) == 1:  # Counties with single name
+        County1.append(county)
+    elif len(county.split()) == 2:  # Counties with two names
+        County2.append(county)
+
+# Print the updated list and categorized lists
+print("Updated County list:", County)
+print("Countyl (Counties with single name):", County1)
+print("County2 (Counties with two names):", County2)
+
+#3a
+
+word = "Python"
+for letter in word:
+    print(letter, end="")
+#ii
+word = "Python"
+for i in range(len(word)):
+    print(word[i], end="")
+
+#b
+#Linear Regression: Linear regression models the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data points. It is commonly used when there is a linear relationship between the variables.
+
+#Polynomial Regression: Polynomial regression extends linear regression by fitting a polynomial equation to the data. It can capture non-linear relationships between the independent and dependent variables by including higher-order terms.
+
+#Ridge Regression: Ridge regression is a regularization technique that adds a penalty term to the linear regression cost function. It helps prevent overfitting by shrinking the coefficients towards zero. It is particularly useful when the independent variables are highly correlated.
+
+#Lasso Regression: Lasso regression, similar to ridge regression, adds a penalty term to the linear regression cost function. However, lasso uses the L1 regularization penalty, which can lead to sparsity by driving some coefficients to exactly zero. It is useful for feature selection and reducing the complexity of the model.
+
+# Net Regression: Elastic net regression combines the penalties of ridge and lasso regression. It is useful when there are high levels of multicollinearity among the independent variables and when feature selection is desired.
+
+#c
+#Advantages:
+
+#Interpretability: Linear regression provides coefficients for each independent variable, allowing for easy interpretation of the relationship between the variables.
+#Computational efficiency: Linear regression is computationally efficient and can handle large datasets with relatively simple calculations.
+#Disadvantages:
+
+#Limited complexity: Linear regression assumes a linear relationship between the independent and dependent variables, which may not always be the case in real-world scenarios where relationships are often non-linear.
+#Sensitivity to outliers: Linear regression is sensitive to outliers, meaning that extreme values can disproportionately influence the model's parameters and predictions.
+
+
+#4
+
+import pandas as pd
+
+# Create the dataframe
+data = pd.DataFrame({
+    'Name': ['James', 'Joan', 'Jacob', 'Samuel', 'Frida', 'Ann', 'Joel'],
+    'Age': [22, 19, 22, 23, 20, 21, 22],
+    'Weight': [68, 51, 63, 70, 49, 52, 55],
+    'County': ['Tharaka Nithi', 'Mombasa', 'Nyeri', 'Taita Taveta', 'Kisunu', 'Migori', 'Mombasa'],
+    'Height': [1.42, 1.48, 1.57, 1.52, 1.35, 1.45, 1.75],
+    'Gender': ['Hale', 'Female', 'Male', 'Male', 'Female', 'Female', 'Hale']
+})
+
+# a) Output the dataframe
+print(data)
+
+# b) i. Print the mean weight
+mean_weight = data['Weight'].mean()
+print("Mean weight:", round(mean_weight, 2))
+
+# b) ii. Print the standard deviation of Age, Weight, and Height
+subset_data = data[['Age', 'Weight', 'Height']]
+std_dev = subset_data.std()
+print("Standard deviation:\n", std_dev)
+
+# b) iii. Create and add the 'Height2' variable
+data['Height2'] = data['Height'].apply(lambda x: 'Tall' if x > 1.5 else 'Short')
+
+print("\nDataFrame with 'Height2' variable:\n", data)
+
+
+#5
+
+#a) Six steps involved in data wrangling:
+
+#Data Acquisition: This step involves obtaining data from various sources such as databases, APIs, files, or web scraping. It may involve collecting raw data that needs cleaning or preprocessing.
+
+#Data Cleaning: In this step, the data is cleaned to remove any inconsistencies, errors, or missing values. This may include tasks such as handling missing data, removing duplicates, correcting errors, and converting data types.
+
+#Data Transformation: Data transformation involves restructuring or transforming the data into a format suitable for analysis. This may include tasks such as normalization, standardization, encoding categorical variables, and feature engineering.
+
+#Data Integration: In this step, data from multiple sources is combined into a single dataset for analysis. This may involve merging datasets, joining tables, or aggregating data from different sources.
+
+#Data Reduction: Data reduction involves reducing the size or dimensionality of the dataset while preserving important information. This may include techniques such as sampling, dimensionality reduction, or feature selection.
+
+# Discretization: This step involves converting continuous data into discrete intervals or categories. This may be done to simplify analysis or to prepare the data for specific algorithms that require discrete inputs.
+
+
+
+
+def is_palindrome(s):
+    """
+    Function to check if a string is a palindrome.
+
+    Parameters:
+    s (str): Input string to be checked
+
+    Returns:
+    bool: True if the string is a palindrome, False otherwise
+    """
+    # Convert the string to lowercase and remove non-alphanumeric characters
+    s = ''.join(c.lower() for c in s if c.isalnum())
+
+    # Check if the string is equal to its reverse
+    return s
+
+
+
+
